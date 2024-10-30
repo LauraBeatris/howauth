@@ -1,8 +1,19 @@
+import SubscribeToEmailList from "./components/SubscribeToEmailList";
+
 export default function Home() {
   return (
     <div>
-      <h1>Coming soon 🚧</h1>
-      <h4>A course platform on how authentication works in the web</h4>
+      <h2>
+        When a developer decides to build a product, they need to get users into
+        their applications, but how?
+      </h2>
+
+      <h3>
+        howauth.com, an interactive learning experience around web
+        authentication
+      </h3>
+
+      <SubscribeToEmailList />
     </div>
   );
 }
