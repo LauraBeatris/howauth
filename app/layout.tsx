@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+// TODO - Improve page metadata
 export const metadata: Metadata = {
   title: "howauth.com",
   description: "Interactive learning platform around web authentication",

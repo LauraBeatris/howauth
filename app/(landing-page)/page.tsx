@@ -1,3 +1,4 @@
+import { IdentityLifeCycle } from "./components/IdentityLifeCycle";
 import SubscribeToEmailList from "./components/SubscribeToEmailList";
 
 export default function Home() {
@@ -12,6 +13,10 @@ export default function Home() {
         howauth.com, an interactive learning experience around web
         authentication
       </h3>
+
+      <h4>Coming on February 2024</h4>
+
+      <IdentityLifeCycle />
 
       <SubscribeToEmailList />
     </div>
