@@ -4,12 +4,21 @@ import { CreateContactResponse, Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+/**
+ * @ref https://resend.com/docs/dashboard/audiences/introduction
+ */
+const audienceId = process.env.RESEND_AUDIENCE_ID;
+
 type ActionState = CreateContactResponse | undefined;
 
 export async function subscribeToEmailList(
   _previousState: ActionState,
   data: FormData
 ) {
+  if (!audienceId) {
+    throw new Error("Audience ID not defined on environments variables");
+  }
+
   const email = data.get("email")?.toString();
 
   if (!email) {
@@ -18,7 +27,7 @@ export async function subscribeToEmailList(
 
   const contact = await resend.contacts.create({
     email,
-    audienceId: "945248ec-9775-4dbd-b0bd-13d3c92259ba",
+    audienceId,
   });
 
   return contact;
