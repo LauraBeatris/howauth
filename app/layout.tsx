@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { sans } from "./fonts";
+
 import "./globals.css";
 
 // TODO - Improve page metadata
@@ -14,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="w-full h-full">
-      <body className="bg-stone-50 w-full h-full">{children}</body>
+      <body className={`bg-stone-50 w-full h-full ${sans.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
