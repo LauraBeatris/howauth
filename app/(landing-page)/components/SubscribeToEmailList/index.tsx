@@ -16,7 +16,7 @@ export default function SubscribeToEmailList() {
           name="email"
           type="email"
           required
-          placeholder="foocorp@email.com"
+          placeholder="Your best email"
           className="flex-1 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
         />
 

@@ -2,6 +2,7 @@ import { IdentityLifeCycle } from "./components/IdentityLifeCycle";
 import SubscribeToEmailList from "./components/SubscribeToEmailList";
 import { serif } from "../fonts";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
             Interactive learning experience around web authentication
           </h1>
 
-          <h4 className="text-md text-orange-700">Coming on February 2024</h4>
+          <h4 className="text-md text-orange-700">Coming on February 2025</h4>
 
           <h2 className="text-lg font-light text-center m-auto text-gray-800">
             Every developer dreams of building the next big thing. Getting users
@@ -42,7 +43,16 @@ export default function Home() {
           src="/images/laura-beatris.png"
         />
 
-        <span className="text-sm text-gray-700">Created by Laura Beatris</span>
+        <span className="text-sm text-gray-700">
+          Created by{" "}
+          <Link
+            href="https://github.com/laurabeatris"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Laura Beatris
+          </Link>
+        </span>
       </footer>
     </main>
   );
@@ -55,6 +65,7 @@ function NoiseTexture() {
       style={{
         filter: "constract(60%) brightness(100%)",
       }}
+      aria-hidden="true"
     >
       <filter id="noise">
         <feTurbulence
