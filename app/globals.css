@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@property --motion-path {
+  syntax: "<custom-ident>";
+  inherits: false;
+  initial-value: none;
+}

@@ -8,15 +8,19 @@ export default function Home() {
     <main className="m-auto max-w-2xl h-full container flex flex-col justify-center items-center p-6">
       <NoiseTexture />
 
+      <IdentityLifeCycle />
+
       <section>
         <div className="w-full flex flex-col items-center gap-2 mb-4">
-          <h1 className={`text-4xl text-center ${serif.className}`}>
+          <h1
+            className={`text-4xl text-center ${serif.className} text-gray-900`}
+          >
             Interactive learning experience around web authentication
           </h1>
 
           <h4 className="text-md text-orange-700">Coming on February 2024</h4>
 
-          <h2 className="text-lg font-light text-center m-auto">
+          <h2 className="text-lg font-light text-center m-auto text-gray-800">
             Every developer dreams of building the next big thing. Getting users
             securely onboard?
             <strong className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-800">
@@ -25,8 +29,6 @@ export default function Home() {
             </strong>
           </h2>
         </div>
-
-        <IdentityLifeCycle />
 
         <SubscribeToEmailList />
       </section>
@@ -40,7 +42,7 @@ export default function Home() {
           src="/images/laura-beatris.png"
         />
 
-        <span className="text-sm">Created by Laura Beatris</span>
+        <span className="text-sm text-gray-700">Created by Laura Beatris</span>
       </footer>
     </main>
   );
